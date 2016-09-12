@@ -16,11 +16,12 @@ int shape = 1;
 
 void setup(){
   size(400,400);
-  background(0,0,0);
+  background(175,92,0);
   noLoop();
 }
 
 void draw(){
+
   noStroke();
   re = random(50);
   gr = random(255);
@@ -31,6 +32,7 @@ void draw(){
   
   if(count > max){
   clear();
+  background(175,92,0);
   count = 0;
   food();
   }
@@ -42,16 +44,19 @@ void draw(){
   score = 10*(max - 50);
   System.out.println(score);
   clear();
+  background(175,92,0);
   }
+  particle();
 }
 
 void food(){
   gr = random(50);
   bl = random(50);
-  fill(255,gr,bl);
   a = ceil(50 + random(300));
   b = ceil(50 + random(300));
+  fill(255,gr,bl);
   rect(a-5,b,10,10);
+  quad(a,b,a+1,b+1,x+1,y+1,x,y);
 }
 
 void mouseMoved() {
@@ -93,3 +98,12 @@ void keyPressed(){
   System.out.println("key pressed");
 }
 
+void particle(){
+  a = ceil(50 + random(300));
+  b = ceil(50 + random(300));
+  re = random(50);
+  gr = random(50);
+  bl = random(50);
+  fill(150+re,50+gr,bl);
+  rect(a,b,5,5);
+}
