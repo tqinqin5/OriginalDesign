@@ -96,6 +96,7 @@ void keyPressed(){
   count = 0;
   clear();
   System.out.println("key pressed");
+  background(175,92,0);
 }
 
 void particle(){
