@@ -4,15 +4,17 @@ int count = 0;
 int a = 0;
 int b = 0;
 int max = 50;
-float re;
-float gr;
-float bl;
+int re;
+int gr;
+int bl;
 int ratiox;
 int ratioy;
 int sizex = 2;
 int sizey = 2;
 int score;
 int shape = 1;
+int o;
+int p;
 
 void setup(){
   size(400,400);
@@ -23,9 +25,9 @@ void setup(){
 void draw(){
 
   noStroke();
-  re = random(50);
-  gr = random(255);
-  bl = random(50);
+  re = ceil(random(50));
+  gr = ceil(random(255));
+  bl = ceil(random(50));
   fill(re,gr,bl);
   drawShape();
   count = count + 1;
@@ -42,15 +44,16 @@ void draw(){
   sizex += 1;
   sizey += 1;
   score = 10*(max - 50);
-  clear();
-  background(175,92,0);
+  System.out.println(score);
+  System.out.println(sizex);
+  System.out.println(sizey);
   }
   particle();
 }
 
 void food(){
-  gr = random(50);
-  bl = random(50);
+  gr = ceil(random(50));
+  bl = ceil(random(50));
   a = ceil(50 + random(300));
   b = ceil(50 + random(300));
   fill(255,gr,bl);
@@ -94,15 +97,16 @@ void keyPressed(){
   sizey = 2;
   count = 0;
   clear();
+  System.out.println("key pressed");
   background(175,92,0);
 }
 
 void particle(){
-  a = ceil(random(400));
-  b = ceil(random(400));
-  re = random(50);
-  gr = random(50);
-  bl = random(50);
+  o = ceil(50 + random(300));
+  p = ceil(50 + random(300));
+  re = ceil(random(50));
+  gr = ceil(random(50));
+  bl = ceil(random(50));
   fill(150+re,50+gr,bl);
-  rect(a,b,3,3);
+  rect(o,p,5,5);
 }
