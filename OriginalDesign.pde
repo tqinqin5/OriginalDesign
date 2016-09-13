@@ -42,7 +42,6 @@ void draw(){
   sizex += 1;
   sizey += 1;
   score = 10*(max - 50);
-  System.out.println(score);
   clear();
   background(175,92,0);
   }
@@ -95,7 +94,6 @@ void keyPressed(){
   sizey = 2;
   count = 0;
   clear();
-  System.out.println("key pressed");
   background(175,92,0);
 }
 
