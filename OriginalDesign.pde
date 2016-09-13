@@ -98,8 +98,8 @@ void keyPressed(){
 }
 
 void particle(){
-  o = ceil(50 + random(300));
-  p = ceil(50 + random(300));
+  o = ceil(random(400));
+  p = ceil(random(400));
   re = ceil(random(50));
   gr = ceil(random(50));
   bl = ceil(random(50));
