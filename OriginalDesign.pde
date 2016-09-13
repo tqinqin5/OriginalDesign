@@ -104,5 +104,5 @@ void particle(){
   gr = random(50);
   bl = random(50);
   fill(150+re,50+gr,bl);
-  rect(a,b,5,5);
+  rect(a,b,3,3);
 }
