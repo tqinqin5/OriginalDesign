@@ -49,13 +49,13 @@ void draw(){
 }
 
 void food(){
-  gr = ceil(random(50));
+/*  gr = ceil(random(50));
   bl = ceil(random(50));
   a = ceil(50 + random(screenSize - 100));
   b = ceil(50 + random(screenSize - 100));
   fill(255,gr,bl);
   rect(a-5,b,10,10);
-  quad(a,b,a+1,b+1,x+1,y+1,x,y);
+  quad(a,b,a+1,b+1,x+1,y+1,x,y);*/
 }
 
 void mouseMoved() {
