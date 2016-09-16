@@ -1,8 +1,9 @@
-int x = 10;
-int y = 10;
+int screenSize = 600;
+float x = 10;
+float y = 10;
 int count = 0;
-int a = 0;
-int b = 0;
+float a = 0;
+float b = 0;
 int max = 50;
 int re;
 int gr;
@@ -17,8 +18,8 @@ int o;
 int p;
 
 void setup(){
-  size(400,400);
-  background(175,92,0);
+  size(screenSize,screenSize);
+  background(0,0,0);
   noLoop();
 }
 
@@ -34,7 +35,6 @@ void draw(){
   
   if(count > max){
   clear();
-  background(175,92,0);
   count = 0;
   food();
   }
@@ -51,16 +51,16 @@ void draw(){
 void food(){
   gr = ceil(random(50));
   bl = ceil(random(50));
-  a = ceil(50 + random(300));
-  b = ceil(50 + random(300));
+  a = ceil(50 + random(screenSize - 100));
+  b = ceil(50 + random(screenSize - 100));
   fill(255,gr,bl);
   rect(a-5,b,10,10);
   quad(a,b,a+1,b+1,x+1,y+1,x,y);
 }
 
 void mouseMoved() {
-  ratiox = abs(mouseX - x);
-  ratioy = abs(mouseY - y);
+  ratiox = abs(mouseX - floor(x));
+  ratioy = abs(mouseY - floor(y));
   if(x<mouseX){
     x = x + ceil(ratiox/20);
   }
@@ -94,12 +94,11 @@ void keyPressed(){
   sizey = 2;
   count = 0;
   clear();
-  background(175,92,0);
 }
 
 void particle(){
-  o = ceil(random(400));
-  p = ceil(random(400));
+  o = ceil(random(screenSize));
+  p = ceil(random(screenSize));
   re = ceil(random(50));
   gr = ceil(random(50));
   bl = ceil(random(50));
