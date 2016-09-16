@@ -89,12 +89,12 @@ void drawShape(){
     }  
 }
 
-/*void keyPressed(){
+void keyPressed(){
   sizex = 2;
   sizey = 2;
   count = 0;
   clear();
-}*/
+}
 
 void particle(){
   o = ceil(random(screenSize));
