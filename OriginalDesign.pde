@@ -59,7 +59,7 @@ void food(){
 }
 
 void mouseMoved() {
-  ratiox = abs(mouseX - floor(x));
+ ratiox = abs(mouseX - floor(x));
   ratioy = abs(mouseY - floor(y));
   if(x<mouseX){
     x = x + ceil(ratiox/20);
@@ -89,12 +89,12 @@ void drawShape(){
     }  
 }
 
-void keyPressed(){
+/*void keyPressed(){
   sizex = 2;
   sizey = 2;
   count = 0;
   clear();
-}
+}*/
 
 void particle(){
   o = ceil(random(screenSize));
